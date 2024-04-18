@@ -1,0 +1,6 @@
+name: Phenol
+version: 1.0.0
+api: [5.0.0]
+antigen: toby7002\Phenol
+author: toby7002
+description: A PHP library for toby7002's PocketMine plugins
