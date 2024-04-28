@@ -5,7 +5,7 @@ namespace toby7002\Phenol;
 use pocketmine\scheduler\AsyncTask;
 use Symfony\Component\Filesystem\Filesystem as Fs;
 
-readonly class Filesystem
+class Filesystem
 {
     /**
      * Deletes files, directories and symlinks:

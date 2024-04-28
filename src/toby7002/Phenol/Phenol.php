@@ -16,8 +16,9 @@ class Phenol
      * @param Task|AsyncTask $task
      * @return void
      */
-    public function runTask(Task|AsyncTask $task): void {
-        if($task instanceof Task) {
+    public function runTask(Task|AsyncTask $task): void
+    {
+        if ($task instanceof Task) {
             $this->plugin->getScheduler()->scheduleTask($task);
         } else {
             $this->plugin->getServer()->getAsyncPool()->submitTask($task);
@@ -27,7 +28,13 @@ class Phenol
     /**
      * @return void
      */
-    public function checkForUpdates(): void {
+    public function checkForUpdates(): void
+    {
         UpdateNotifier::init($this->plugin);
+    }
+
+    public function getLogger(): Logger
+    {
+        return new Logger($this->plugin->getLogger());
     }
 }
