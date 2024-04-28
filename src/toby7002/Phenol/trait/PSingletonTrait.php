@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace toby7002\Phenol\trait;
 
-trait PSingletonPattern
+trait PSingletonTrait
 {
     /** @var self|null */
     private static $pInstance = null;
