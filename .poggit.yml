@@ -1,0 +1,10 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/toby7002/Phenol
+build-by-default: true
+branches:
+- main
+projects:
+  Phenol:
+    path: ""
+    model: virion
+    type: library
+...
