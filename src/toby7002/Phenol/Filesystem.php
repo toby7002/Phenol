@@ -15,7 +15,7 @@ class Filesystem
      */
     public static function remove(string $path): AsyncTask
     {
-        return new class($path) extends AsyncTask {
+        return new class ($path) extends AsyncTask {
             private Fs $fs;
             public function __construct(private readonly string $path)
             {
@@ -40,9 +40,9 @@ class Filesystem
      */
     public static function rename(string $old, string $new, bool $force = false): AsyncTask
     {
-        return new class($old, $new, $force) extends AsyncTask {
+        return new class ($old, $new, $force) extends AsyncTask {
             private Fs $fs;
-            public function __construct(private readonly string $old,private readonly string $new,private readonly bool $force = false)
+            public function __construct(private readonly string $old, private readonly string $new, private readonly bool $force = false)
             {
                 $this->fs = new Fs();
             }
@@ -63,9 +63,9 @@ class Filesystem
      */
     public static function dumpFile(string $path, string $content): AsyncTask
     {
-        return new class($path, $content) extends AsyncTask {
+        return new class ($path, $content) extends AsyncTask {
             private Fs $fs;
-            public function __construct(private readonly string $path,private readonly string $content)
+            public function __construct(private readonly string $path, private readonly string $content)
             {
                 $this->fs = new Fs();
             }

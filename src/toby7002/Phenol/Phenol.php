@@ -8,9 +8,7 @@ use pocketmine\scheduler\Task;
 
 class Phenol
 {
-    public function __construct(private readonly PluginBase $plugin)
-    {
-    }
+    public function __construct(private readonly PluginBase $plugin) {}
 
     /**
      * Most Phenol's function need to be run by this function.

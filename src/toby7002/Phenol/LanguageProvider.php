@@ -9,7 +9,8 @@ class LanguageProvider
      */
     private array $translations = [];
 
-    public function loadTranslationsFromJSON(string $name, string $path): void {
+    public function loadTranslationsFromJSON(string $name, string $path): void
+    {
         $this->translations = json_decode(file_get_contents($path) ?: "", true);
     }
 

@@ -10,10 +10,8 @@ class PharHelper
 {
     public static function extract(string $path, string $to): AsyncTask
     {
-        return new class($path, $to) extends AsyncTask {
-            public function __construct(private readonly string $path, private readonly string $to)
-            {
-            }
+        return new class ($path, $to) extends AsyncTask {
+            public function __construct(private readonly string $path, private readonly string $to) {}
 
             public function onRun(): void
             {

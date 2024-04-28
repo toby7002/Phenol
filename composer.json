@@ -1,0 +1,38 @@
+{
+    "name": "toby7002/phenol",
+    "description": "A PHP library for toby7002's PocketMine plugins",
+    "type": "library",
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.54",
+        "pocketmine/pocketmine-mp": "^5.15"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "analyze": "vendor/bin/phpstan analyze -c phpstan.neon.dist",
+        "fix-cs": "vendor/bin/php-cs-fixer fix"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "toby7002\\Phenol\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyen Minh Tho",
+            "email": "hello@toby7002.dev"
+        }
+    ],
+    "extra": {
+        "virion":{
+            "spec": "3.0",
+            "namespace-root": "toby7002\\Phenol\\"
+        }
+    }
+}

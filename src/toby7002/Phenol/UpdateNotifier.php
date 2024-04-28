@@ -16,14 +16,12 @@ class UpdateNotifier
         $pluginName = $plugin->getDescription()->getName();
         $pluginVersion = $plugin->getDescription()->getVersion();
 
-        $plugin->getServer()->getAsyncPool()->submitTask(new class($pluginName, $pluginVersion) extends AsyncTask {
+        $plugin->getServer()->getAsyncPool()->submitTask(new class ($pluginName, $pluginVersion) extends AsyncTask {
             private static int $BAD_RESPONSE = 0;
             private static int $OUTDATED = 1;
             private static int $UP2DATE = 2;
 
-            public function __construct(private readonly string $pluginName, private readonly string $pluginVersion)
-            {
-            }
+            public function __construct(private readonly string $pluginName, private readonly string $pluginVersion) {}
 
             public function onRun(): void
             {
