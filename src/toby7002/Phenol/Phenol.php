@@ -13,6 +13,8 @@ class Phenol
     }
 
     /**
+     * Most Phenol's function need to be run by this function.
+     *
      * @param Task|AsyncTask $task
      * @return void
      */
