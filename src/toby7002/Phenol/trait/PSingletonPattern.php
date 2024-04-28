@@ -7,28 +7,28 @@ namespace toby7002\Phenol\trait;
 trait PSingletonPattern
 {
     /** @var self|null */
-    private static $instance = null;
+    private static $pInstance = null;
 
     private static function make(): self
     {
         return new self();
     }
 
-    public static function getInstance(): self
+    public static function getPInstance(): self
     {
-        if(self::$instance === null) {
-            self::$instance = self::make();
+        if(self::$pInstance === null) {
+            self::$pInstance = self::make();
         }
-        return self::$instance;
+        return self::$pInstance;
     }
 
-    public static function setInstance(self $instance): void
+    public static function setPInstance(self $instance): void
     {
-        self::$instance = $instance;
+        self::$pInstance = $instance;
     }
 
-    public static function reset(): void
+    public static function pReset(): void
     {
-        self::$instance = null;
+        self::$pInstance = null;
     }
 }
