@@ -9,9 +9,9 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\utils\Internet;
 
-class Benzenol
+class UpdateNotifier
 {
-    public static function checkForUpdates(PluginBase $plugin): void
+    public static function init(PluginBase $plugin): void
     {
         $pluginName = $plugin->getDescription()->getName();
         $pluginVersion = $plugin->getDescription()->getVersion();
